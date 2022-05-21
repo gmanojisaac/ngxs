@@ -22,7 +22,7 @@ export class TutorialStateModel {
 
 export class TutorialState {
     //here we define selectors and actions
-    constructor(private orderService: OrderService) {}
+    constructor() {}
     @Selector() //this selector will populate from the store to the component
     static getTutorials(state: TutorialStateModel) {
         return state.tutorials;
