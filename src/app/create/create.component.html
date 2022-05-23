@@ -4,3 +4,18 @@
 
 	<button (click)="addTutorial(name.value, url.value)">Add Tutorial</button>	
 </div>
+
+<h1><span class="badge">NgRx</span> SaladBar</h1>
+<div class="right" *ngIf="ngxsInfo$ | async as myngxs">
+	<p>Order ID: <span class="badge">{{ myngxs.orderId }}</span></p>
+	<p>Username: <span class="badge">{{ myngxs.username }}</span></p>
+
+	<div *ngIf="!myngxs.username">
+        <input class="form-control" aria-placeholder="your name..."  type="text"  [(ngModel)]="usernameEntered">
+        <button class="btn btn-outline-secondary" [disabled]="usernameEntered === ''" (click)="clickHandler(usernameEntered)">Name for this Order</button>
+    </div>
+</div>
+
+
+
+

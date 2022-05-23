@@ -3,3 +3,9 @@ export interface Tutorial {
 	url: string;
 }
 
+export interface ngxsAppStateModel {
+	username: string;
+	orderId?: number;
+	status?: 'pending' | 'confirmed' | 'declined';
+  }
+  

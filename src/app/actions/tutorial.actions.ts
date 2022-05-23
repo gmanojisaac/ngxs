@@ -5,13 +5,21 @@
 //Component will contact the Action whenever user initiates it
 //Component will use selector to populate itself.
 
-import { Tutorial } from './../models/tutorial.model';
+import { Tutorial, ngxsAppStateModel } from './../models/tutorial.model';
 
 
 export class AddTutorial {
 	static readonly type = '[Tutorial] Add';
 
 	constructor(public payload: Tutorial){
+	}
+
+}
+
+export class AddName {
+	static readonly type = '[ngxsAppStateModel] Add';
+
+	constructor(public payload: string){
 	}
 
 }
